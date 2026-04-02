@@ -207,7 +207,39 @@ export default function VortexxHomepage() {
         </div>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {services.map((service) => (
+          {services.map((service) =>
+            service.title === "Wifi" ? (
+              <div
+                key={service.title}
+                className="group [perspective:1000px] min-h-[220px]"
+              >
+                <div className="relative h-full min-h-[220px] transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                  {/* Voorkant */}
+                  <article className="absolute inset-0 [backface-visibility:hidden] rounded-[1.75rem] border border-slate-200 bg-white p-7 shadow-sm">
+                    <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-50 text-xl font-black text-orange-600">
+                      +
+                    </div>
+                    <h3 className="text-2xl font-black tracking-tight text-slate-950">
+                      {service.title}
+                    </h3>
+                    <p className="mt-4 text-base leading-7 text-slate-600">
+                      {service.text}
+                    </p>
+                    <div className="mt-6 text-sm font-bold text-orange-500">
+                      Meer weten →
+                    </div>
+                  </article>
+                  {/* Achterkant */}
+                  <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-[1.75rem] overflow-hidden border border-slate-200 shadow-sm bg-white">
+                    <img
+                      src="/images/ubiquiti-cert.png"
+                      alt="Ubiquiti UniFi Full Stack Professional certificaat"
+                      className="h-full w-full object-contain p-6"
+                    />
+                  </div>
+                </div>
+              </div>
+            ) : (
             <article
               key={service.title}
               className="group rounded-[1.75rem] border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
@@ -225,7 +257,8 @@ export default function VortexxHomepage() {
                 Meer weten →
               </div>
             </article>
-          ))}
+            )
+          )}
         </div>
       </section>
 
