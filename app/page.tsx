@@ -208,7 +208,7 @@ export default function VortexxHomepage() {
 
         <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {services.map((service) =>
-            service.title === "Wifi" || service.title === "Elektra renovatie" ? (
+            service.title === "Wifi" || service.title === "Elektra renovatie" || service.title === "Verlichting" ? (
               <div
                 key={service.title}
                 className="group [perspective:1000px] min-h-[220px]"
@@ -234,8 +234,10 @@ export default function VortexxHomepage() {
                     <img
                       src={service.title === "Wifi"
                         ? "/images/87d5a97055a3f8bdf3decc4ce410bd0e8a1b8ab368d74fabe7f1d3ec76fadd94.png"
-                        : "/images/elektra-renovatie.jpeg"}
-                      alt={service.title === "Wifi" ? "Ubiquiti UniFi Full Stack Professional certificaat" : "Elektra renovatie project"}
+                        : service.title === "Elektra renovatie"
+                        ? "/images/elektra-renovatie.jpeg"
+                        : "/images/verlichting.jpeg"}
+                      alt={service.title === "Wifi" ? "Ubiquiti UniFi Full Stack Professional certificaat" : service.title === "Elektra renovatie" ? "Elektra renovatie project" : "LED verlichting project"}
                       className={service.title === "Wifi" ? "h-full w-full object-contain p-6" : "h-full w-full object-cover"}
                     />
                   </div>
