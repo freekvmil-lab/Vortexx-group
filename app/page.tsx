@@ -232,7 +232,7 @@ export default function VortexxHomepage() {
                   {/* Achterkant */}
                   <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-[1.75rem] overflow-hidden border border-slate-200 shadow-sm bg-white">
                     <img
-                      src="/images/ubiquiti-cert.png"
+                      src="/images/87d5a97055a3f8bdf3decc4ce410bd0e8a1b8ab368d74fabe7f1d3ec76fadd94.png"
                       alt="Ubiquiti UniFi Full Stack Professional certificaat"
                       className="h-full w-full object-contain p-6"
                     />
