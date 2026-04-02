@@ -237,7 +237,7 @@ export default function VortexxHomepage() {
                         : service.title === "Elektra renovatie"
                         ? "/images/elektra-renovatie.jpeg"
                         : service.title === "Automatisering"
-                        ? "/images/automatisering-tablet.jpeg"
+                        ? "/images/Loxone.jpg"
                         : "/images/verlichting.jpeg"}
                       alt={service.title === "Wifi" ? "Ubiquiti certificaat" : service.title === "Elektra renovatie" ? "Elektra renovatie" : service.title === "Automatisering" ? "Domotica tablet" : "LED verlichting"}
                       className={service.title === "Wifi" ? "h-full w-full object-contain p-6" : "h-full w-full object-cover"}
