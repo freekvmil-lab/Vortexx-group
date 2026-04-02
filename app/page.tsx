@@ -4,8 +4,8 @@ import WhatsAppButton from "./components/WhatsAppButton";
 export default function VortexxHomepage() {
   const services = [
     {
-      title: "Meterkasten",
-      text: "Van uitbreiding tot complete vervanging. Veilig, overzichtelijk en klaar voor de eisen van nu.",
+      title: "Wifi",
+      text: "Stabiel draadloos netwerk door de hele woning of bedrijfsruimte. Van losse access points tot volledige mesh-oplossingen.",
     },
     {
       title: "Automatisering",
@@ -202,8 +202,7 @@ export default function VortexxHomepage() {
             Waar we je mee kunnen helpen
           </h2>
           <p className="mt-5 text-lg leading-8 text-slate-600">
-            Duidelijke diensten, slim opgebouwd. Precies zoals een goede website
-            ook hoort te voelen.
+            Van elektro en wifi tot slimme automatisering en maatwerk: oplossingen die passen bij jouw ruimte en gebruik.
           </p>
         </div>
 
