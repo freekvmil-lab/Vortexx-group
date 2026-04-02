@@ -284,7 +284,7 @@ export default function AlgemeneVoorwaarden() {
           <span className="text-orange-500">|</span>
           <a href="mailto:info@vortexxgroup.nl" className="hover:text-orange-400 transition">info@vortexxgroup.nl</a>
           <span className="text-orange-500">|</span>
-          <a href="tel:+31624995033" className="hover:text-orange-400 transition">+31 6 24 99 50 33</a>
+          <a href="tel:+31617033441" className="hover:text-orange-400 transition">+31 6 17 03 34 41</a>
         </div>
       </footer>
     </main>
