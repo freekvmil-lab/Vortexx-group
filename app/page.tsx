@@ -417,7 +417,7 @@ export default function VortexxHomepage() {
 
       {/* WhatsApp floating button */}
       <a
-        href="https://wa.me/31624995033"
+        href="https://wa.me/31624995033?text=Hallo%2C%20ik%20heb%20een%20vraag%20over%20een%20offerte"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Stuur een WhatsApp bericht"
