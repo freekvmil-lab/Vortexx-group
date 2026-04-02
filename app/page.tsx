@@ -79,17 +79,14 @@ export default function VortexxHomepage() {
     <main className="min-h-screen bg-white text-slate-900">
       <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-          <div className="flex items-center gap-4">
+          <a href="/" className="flex items-center gap-3">
             <img
-              src="/logo.jpeg"
-              alt="Vortexx Group B.V. logo"
-              className="h-12 w-auto rounded-xl object-contain"
+              src="/icon.png"
+              alt="Vortexx Group icoon"
+              className="h-16 w-auto object-contain"
             />
-            <div>
-              <div className="text-lg font-black tracking-tight">Vortexx Group B.V.</div>
-              <div className="text-sm text-slate-500">Elektro & Automatisering</div>
-            </div>
-          </div>
+            <div className="text-lg font-black tracking-tight">Vortexx Group B.V.</div>
+          </a>
 
           <nav className="hidden items-center gap-7 text-sm font-medium md:flex">
             <a href="#diensten" className="transition hover:text-orange-500">Diensten</a>
@@ -115,7 +112,7 @@ export default function VortexxHomepage() {
               Duidelijk advies • Netjes gewerkt • Slim geregeld
             </div>
             <h1 className="max-w-2xl text-4xl font-black leading-tight tracking-tight text-slate-950 md:text-6xl">
-              Elektro en automatisering die gewoon goed geregeld is
+              Elektro en Automatisering<br />Waar verduurzaming begint
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
               Van meterkast en verlichting tot slimme aansturing en maatwerk.
@@ -440,6 +437,18 @@ export default function VortexxHomepage() {
           </form>
         </div>
       </section>
+
+      <footer className="bg-slate-950 border-t border-white/10 py-6 text-center text-sm text-slate-400">
+        <div className="flex items-center justify-center gap-3 flex-wrap">
+          <span className="font-semibold text-white">Vortexx Group B.V.</span>
+          <span className="text-orange-500">|</span>
+          <span>Te Naarden</span>
+          <span className="text-orange-500">|</span>
+          <a href="mailto:info@vortexxgroup.nl" className="hover:text-orange-400 transition">info@vortexxgroup.nl</a>
+          <span className="text-orange-500">|</span>
+          <a href="tel:+31624995033" className="hover:text-orange-400 transition">+31 6 24 99 50 33</a>
+        </div>
+      </footer>
     </main>
   );
 }
