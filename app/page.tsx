@@ -206,26 +206,28 @@ export default function VortexxHomepage() {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3 items-start" style={{gridAutoRows: '1fr'}}>
           {services.map((service) =>
             service.title === "Wifi" || service.title === "Elektra renovatie" || service.title === "Verlichting" || service.title === "Automatisering" ? (
               <div
                 key={service.title}
-                className="group [perspective:1000px] min-h-[220px]"
+                className="group [perspective:1000px] h-[280px]"
               >
-                <div className="relative h-full min-h-[220px] transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                <div className="relative h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                   {/* Voorkant */}
-                  <article className="absolute inset-0 [backface-visibility:hidden] rounded-[1.75rem] border border-slate-200 bg-white p-7 shadow-sm">
-                    <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-50 text-xl font-black text-orange-600">
-                      +
+                  <article className="absolute inset-0 [backface-visibility:hidden] rounded-[1.75rem] border border-slate-200 bg-white p-7 shadow-sm flex flex-col">
+                    <div className="flex items-start justify-between">
+                      <h3 className="text-2xl font-black tracking-tight text-slate-950">
+                        {service.title}
+                      </h3>
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-lg font-black text-orange-600 ml-3">
+                        +
+                      </div>
                     </div>
-                    <h3 className="text-2xl font-black tracking-tight text-slate-950">
-                      {service.title}
-                    </h3>
                     <p className="mt-4 text-base leading-7 text-slate-600">
                       {service.text}
                     </p>
-                    <div className="mt-6 text-sm font-bold text-orange-500">
+                    <div className="mt-auto pt-4 text-sm font-bold text-orange-500">
                       Meer weten →
                     </div>
                   </article>
@@ -248,18 +250,20 @@ export default function VortexxHomepage() {
             ) : (
             <article
               key={service.title}
-              className="group rounded-[1.75rem] border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+              className="group h-[280px] rounded-[1.75rem] border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-xl flex flex-col"
             >
-              <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-50 text-xl font-black text-orange-600">
-                +
+              <div className="flex items-start justify-between">
+                <h3 className="text-2xl font-black tracking-tight text-slate-950">
+                  {service.title}
+                </h3>
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-lg font-black text-orange-600 ml-3">
+                  +
+                </div>
               </div>
-              <h3 className="text-2xl font-black tracking-tight text-slate-950">
-                {service.title}
-              </h3>
               <p className="mt-4 text-base leading-7 text-slate-600">
                 {service.text}
               </p>
-              <div className="mt-6 text-sm font-bold text-orange-500">
+              <div className="mt-auto pt-4 text-sm font-bold text-orange-500">
                 Meer weten →
               </div>
             </article>
