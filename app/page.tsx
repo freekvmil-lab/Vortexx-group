@@ -1,3 +1,5 @@
+import ContactForm from "./components/ContactForm";
+
 export default function VortexxHomepage() {
   const services = [
     {
@@ -395,46 +397,7 @@ export default function VortexxHomepage() {
             </div>
           </div>
 
-          <form className="rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur">
-            <div className="grid gap-5">
-              <div>
-                <label className="mb-2 block text-sm font-semibold text-slate-200">
-                  Naam
-                </label>
-                <input
-                  type="text"
-                  placeholder="Je naam"
-                  className="w-full rounded-2xl border border-white/10 bg-white/10 px-4 py-4 text-white placeholder:text-slate-400 focus:border-orange-400 focus:outline-none"
-                />
-              </div>
-              <div>
-                <label className="mb-2 block text-sm font-semibold text-slate-200">
-                  E-mail
-                </label>
-                <input
-                  type="email"
-                  placeholder="jij@voorbeeld.nl"
-                  className="w-full rounded-2xl border border-white/10 bg-white/10 px-4 py-4 text-white placeholder:text-slate-400 focus:border-orange-400 focus:outline-none"
-                />
-              </div>
-              <div>
-                <label className="mb-2 block text-sm font-semibold text-slate-200">
-                  Waar kunnen we je mee helpen?
-                </label>
-                <textarea
-                  rows={5}
-                  placeholder="Vertel kort wat je zoekt"
-                  className="w-full rounded-2xl border border-white/10 bg-white/10 px-4 py-4 text-white placeholder:text-slate-400 focus:border-orange-400 focus:outline-none"
-                />
-              </div>
-              <button
-                type="submit"
-                className="rounded-2xl bg-orange-500 px-6 py-4 text-base font-bold text-white shadow-lg shadow-orange-500/20 transition hover:scale-[1.02]"
-              >
-                Offerte aanvragen
-              </button>
-            </div>
-          </form>
+          <ContactForm />
         </div>
       </section>
 
@@ -447,6 +410,8 @@ export default function VortexxHomepage() {
           <a href="mailto:info@vortexxgroup.nl" className="hover:text-orange-400 transition">info@vortexxgroup.nl</a>
           <span className="text-orange-500">|</span>
           <a href="tel:+31624995033" className="hover:text-orange-400 transition">+31 6 24 99 50 33</a>
+          <span className="text-orange-500">|</span>
+          <a href="/algemene-voorwaarden" className="hover:text-orange-400 transition">Algemene Voorwaarden</a>
         </div>
       </footer>
     </main>
