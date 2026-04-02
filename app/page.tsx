@@ -231,26 +231,17 @@ export default function VortexxHomepage() {
                   </article>
                   {/* Achterkant */}
                   <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-[1.75rem] overflow-hidden border border-slate-200 shadow-sm bg-white">
-                    {service.title === "Automatisering" ? (
-                      <video
-                        src="/images/automatisering.mov"
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                        className="h-full w-full object-cover"
-                      />
-                    ) : (
-                      <img
-                        src={service.title === "Wifi"
-                          ? "/images/87d5a97055a3f8bdf3decc4ce410bd0e8a1b8ab368d74fabe7f1d3ec76fadd94.png"
-                          : service.title === "Elektra renovatie"
-                          ? "/images/elektra-renovatie.jpeg"
-                          : "/images/verlichting.jpeg"}
-                        alt={service.title === "Wifi" ? "Ubiquiti UniFi Full Stack Professional certificaat" : service.title === "Elektra renovatie" ? "Elektra renovatie project" : "LED verlichting project"}
-                        className={service.title === "Wifi" ? "h-full w-full object-contain p-6" : "h-full w-full object-cover"}
-                      />
-                    )}
+                    <img
+                      src={service.title === "Wifi"
+                        ? "/images/87d5a97055a3f8bdf3decc4ce410bd0e8a1b8ab368d74fabe7f1d3ec76fadd94.png"
+                        : service.title === "Elektra renovatie"
+                        ? "/images/elektra-renovatie.jpeg"
+                        : service.title === "Automatisering"
+                        ? "/images/automatisering-tablet.jpeg"
+                        : "/images/verlichting.jpeg"}
+                      alt={service.title === "Wifi" ? "Ubiquiti certificaat" : service.title === "Elektra renovatie" ? "Elektra renovatie" : service.title === "Automatisering" ? "Domotica tablet" : "LED verlichting"}
+                      className={service.title === "Wifi" ? "h-full w-full object-contain p-6" : "h-full w-full object-cover"}
+                    />
                   </div>
                 </div>
               </div>
