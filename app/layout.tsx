@@ -16,6 +16,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Vortexx Group B.V. | Elektro & Automatisering",
   description: "Van meterkast en verlichting tot slimme aansturing en maatwerk. Voor woningen en bedrijven.",
+  icons: {
+    icon: "/icon.png",
+    apple: "/icon.png",
+  },
 };
 
 export const viewport = {

@@ -8,6 +8,7 @@ interface FlipServiceCardProps {
   imageSrc: string;
   imageAlt: string;
   imageClassName?: string;
+  cardHeight?: string;
 }
 
 export default function FlipServiceCard({
@@ -16,13 +17,14 @@ export default function FlipServiceCard({
   imageSrc,
   imageAlt,
   imageClassName = "h-full w-full object-cover",
+  cardHeight = "h-[280px]",
 }: FlipServiceCardProps) {
   const [open, setOpen] = useState(false);
 
   return (
     <>
       {/* Desktop: CSS hover flip */}
-      <div className="hidden md:block group [perspective:1000px] h-[280px]">
+      <div className={`hidden md:block group [perspective:1000px] ${cardHeight}`}>
         <div className="relative h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
           <article className="absolute inset-0 [backface-visibility:hidden] rounded-[1.75rem] border border-slate-200 bg-white p-7 shadow-sm flex flex-col">
             <div className="flex items-start justify-between">
@@ -57,7 +59,7 @@ export default function FlipServiceCard({
           </button>
         </div>
         {open && (
-          <img src={imageSrc} alt={imageAlt} className="w-full h-48 object-cover" />
+          <img src={imageSrc} alt={imageAlt} className={`w-full h-36 ${imageClassName.includes('object-contain') ? 'object-contain p-4 bg-white' : 'object-cover'}`} />
         )}
       </article>
     </>

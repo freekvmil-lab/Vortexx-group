@@ -210,7 +210,7 @@ export default function VortexxHomepage() {
 
         <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3 items-start">
           {services.map((service) =>
-            service.title === "Wifi" || service.title === "Elektra renovatie" || service.title === "Verlichting" || service.title === "Automatisering" ? (
+            service.title === "Wifi" || service.title === "Elektra renovatie" || service.title === "Verlichting" || service.title === "Automatisering" || service.title === "Maatwerk" || service.title === "Advies en uitvoering" ? (
               <FlipServiceCard
                 key={service.title}
                 title={service.title}
@@ -222,15 +222,22 @@ export default function VortexxHomepage() {
                     ? "/images/elektra-renovatie.jpeg"
                     : service.title === "Automatisering"
                     ? "/images/Loxone.jpg"
+                    : service.title === "Maatwerk"
+                    ? "/images/9F55460A-5F3A-4B25-B2F9-6549A6341B25_1_105_c.jpeg"
+                    : service.title === "Advies en uitvoering"
+                    ? "/images/image.png"
                     : "/images/verlichting.jpeg"
                 }
                 imageAlt={
                   service.title === "Wifi" ? "Ubiquiti certificaat"
                   : service.title === "Elektra renovatie" ? "Elektra renovatie"
                   : service.title === "Automatisering" ? "Domotica tablet"
+                  : service.title === "Maatwerk" ? "Maatwerk installatie"
+                  : service.title === "Advies en uitvoering" ? "Advies en uitvoering"
                   : "LED verlichting"
                 }
-                imageClassName={service.title === "Wifi" ? "h-full w-full object-contain p-6" : "h-full w-full object-cover"}
+                imageClassName={service.title === "Wifi" || service.title === "Advies en uitvoering" ? "h-full w-full object-contain p-6" : "h-full w-full object-cover"}
+                cardHeight={service.title === "Advies en uitvoering" ? "h-[420px]" : "h-[280px]"}
               />
             ) : (
             <article
