@@ -187,7 +187,8 @@ export default function VortexxHomepage() {
             <img
               src="/images/deur.jpeg"
               alt="Stalen deur met maatwerk verlichting"
-              className="h-full min-h-[300px] w-full rounded-[1rem] object-cover object-[65%_center] scale-[1.35]"
+              className="h-full min-h-[300px] w-full rounded-[1rem] object-cover"
+              style={{ transform: "scale(1.5)", objectPosition: "70% center", transformOrigin: "70% center" }}
             />
           </div>
         </div>
