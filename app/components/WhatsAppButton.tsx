@@ -27,7 +27,7 @@ export default function WhatsAppButton() {
         </div>
       )}
       <a
-        href="https://wa.me/31624995033"
+        href="https://wa.me/31617303441"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Stuur een WhatsApp bericht"
