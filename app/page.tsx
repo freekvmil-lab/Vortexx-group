@@ -1,5 +1,6 @@
 import ContactForm from "./components/ContactForm";
 import WhatsAppButton from "./components/WhatsAppButton";
+import FlipServiceCard from "./components/FlipServiceCard";
 
 export default function VortexxHomepage() {
   const services = [
@@ -82,13 +83,13 @@ export default function VortexxHomepage() {
     <main className="min-h-screen bg-white text-slate-900">
       <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-          <a href="/" className="flex items-center gap-3">
+          <a href="/" className="flex items-center gap-2 md:gap-3">
             <img
               src="/icon.png"
               alt="Vortexx Group icoon"
-              className="h-16 w-auto object-contain"
+              className="h-10 w-auto object-contain md:h-16"
             />
-            <div className="text-lg font-black tracking-tight">Vortexx Group B.V.</div>
+            <div className="text-sm font-black tracking-tight md:text-lg">Vortexx Group B.V.</div>
           </a>
 
           <nav className="hidden items-center gap-7 text-sm font-medium md:flex">
@@ -115,12 +116,11 @@ export default function VortexxHomepage() {
               Duidelijk advies • Netjes gewerkt • Slim geregeld
             </div>
             <h1 className="max-w-2xl text-4xl font-black leading-tight tracking-tight text-slate-950 md:text-6xl">
-              Elektro en Automatisering<br />Waar verduurzaming begint
+              Elektro en automatisering,<br />Waar verduurzaming begint
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
-              Van meterkast en verlichting tot slimme aansturing en maatwerk.
-              Voor woningen en bedrijven die een nette, duidelijke en betrouwbare
-              oplossing zoeken.
+              Van meterkast en verlichting tot slimme systemen en maatwerkoplossingen.
+              Voor woningen en bedrijven die kiezen voor kwaliteit, duidelijkheid en betrouwbaarheid.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -161,7 +161,8 @@ export default function VortexxHomepage() {
               <img
                 src="/images/Keuken.png"
                 alt="Moderne keuken met strakke afwerking en slimme verlichting"
-                className="h-[520px] w-full rounded-[1.5rem] object-cover object-[78%_35%] scale-[1.28]"
+                className="h-[520px] w-full rounded-[1.5rem] object-cover"
+                style={{ transform: "scale(1.28)", objectPosition: "78% 35%", transformOrigin: "78% 35%", imageRendering: "auto" }}
               />
             </div>
           </div>
@@ -188,7 +189,7 @@ export default function VortexxHomepage() {
               src="/images/deur.jpeg"
               alt="Stalen deur met maatwerk verlichting"
               className="h-full min-h-[300px] w-full rounded-[1rem] object-cover"
-              style={{ transform: "scale(1.5)", objectPosition: "70% center", transformOrigin: "70% center" }}
+              style={{ transform: "scale(1.45)", objectPosition: "60% center", transformOrigin: "60% center" }}
             />
           </div>
         </div>
@@ -207,47 +208,30 @@ export default function VortexxHomepage() {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3 items-start" style={{gridAutoRows: '1fr'}}>
+        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3 items-start">
           {services.map((service) =>
             service.title === "Wifi" || service.title === "Elektra renovatie" || service.title === "Verlichting" || service.title === "Automatisering" ? (
-              <div
+              <FlipServiceCard
                 key={service.title}
-                className="group [perspective:1000px] h-[280px]"
-              >
-                <div className="relative h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                  {/* Voorkant */}
-                  <article className="absolute inset-0 [backface-visibility:hidden] rounded-[1.75rem] border border-slate-200 bg-white p-7 shadow-sm flex flex-col">
-                    <div className="flex items-start justify-between">
-                      <h3 className="text-2xl font-black tracking-tight text-slate-950">
-                        {service.title}
-                      </h3>
-                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-lg font-black text-orange-600 ml-3">
-                        +
-                      </div>
-                    </div>
-                    <p className="mt-4 text-base leading-7 text-slate-600">
-                      {service.text}
-                    </p>
-                    <div className="mt-auto pt-4 text-sm font-bold text-orange-500">
-                      Meer weten →
-                    </div>
-                  </article>
-                  {/* Achterkant */}
-                  <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-[1.75rem] overflow-hidden border border-slate-200 shadow-sm bg-white">
-                    <img
-                      src={service.title === "Wifi"
-                        ? "/images/87d5a97055a3f8bdf3decc4ce410bd0e8a1b8ab368d74fabe7f1d3ec76fadd94.png"
-                        : service.title === "Elektra renovatie"
-                        ? "/images/elektra-renovatie.jpeg"
-                        : service.title === "Automatisering"
-                        ? "/images/Loxone.jpg"
-                        : "/images/verlichting.jpeg"}
-                      alt={service.title === "Wifi" ? "Ubiquiti certificaat" : service.title === "Elektra renovatie" ? "Elektra renovatie" : service.title === "Automatisering" ? "Domotica tablet" : "LED verlichting"}
-                      className={service.title === "Wifi" ? "h-full w-full object-contain p-6" : "h-full w-full object-cover"}
-                    />
-                  </div>
-                </div>
-              </div>
+                title={service.title}
+                text={service.text}
+                imageSrc={
+                  service.title === "Wifi"
+                    ? "/images/87d5a97055a3f8bdf3decc4ce410bd0e8a1b8ab368d74fabe7f1d3ec76fadd94.png"
+                    : service.title === "Elektra renovatie"
+                    ? "/images/elektra-renovatie.jpeg"
+                    : service.title === "Automatisering"
+                    ? "/images/Loxone.jpg"
+                    : "/images/verlichting.jpeg"
+                }
+                imageAlt={
+                  service.title === "Wifi" ? "Ubiquiti certificaat"
+                  : service.title === "Elektra renovatie" ? "Elektra renovatie"
+                  : service.title === "Automatisering" ? "Domotica tablet"
+                  : "LED verlichting"
+                }
+                imageClassName={service.title === "Wifi" ? "h-full w-full object-contain p-6" : "h-full w-full object-cover"}
+              />
             ) : (
             <article
               key={service.title}
