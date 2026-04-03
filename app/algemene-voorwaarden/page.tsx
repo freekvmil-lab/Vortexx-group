@@ -280,7 +280,7 @@ export default function AlgemeneVoorwaarden() {
         <div className="flex items-center justify-center gap-3 flex-wrap">
           <span className="font-semibold text-white">Vortexx Group B.V.</span>
           <span className="text-orange-500">|</span>
-          <span>Te Naarden</span>
+          <span>Naarden</span>
           <span className="text-orange-500">|</span>
           <a href="mailto:info@vortexxgroup.nl" className="hover:text-orange-400 transition">info@vortexxgroup.nl</a>
           <span className="text-orange-500">|</span>
