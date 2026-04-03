@@ -159,7 +159,7 @@ export default function VortexxHomepage() {
             <div className="absolute -bottom-6 -right-6 h-40 w-40 rounded-full bg-slate-300/40 blur-3xl" />
             <div className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-3 shadow-2xl">
               <img
-                src="/images/Keuken.jpg"
+                src="/images/Keuken.png"
                 alt="Moderne keuken met strakke afwerking en slimme verlichting"
                 className="h-[520px] w-full rounded-[1.5rem] object-cover object-[78%_35%] scale-[1.28]"
               />
